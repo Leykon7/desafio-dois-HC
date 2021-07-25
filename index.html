@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de Cadastramento</title>
+
+    <link rel="stylesheet" href="./estilos/global.css">
+    <link rel="stylesheet" href="./estilos/style.css">
+
+</head>
+<body>
+    <header>
+        <img src="./assets/baixados.png">
+        <h1>Menu de Cadastramento</h1>
+        <div>
+            texto de dimensionamento
+        </div>
+    </header>
+    <main>
+        <section class="inputs">
+            <div class="inputs-proprios">
+                <label for="primeiro">Cadastro de Clientes:</label>
+                <a href="./clientes.html">
+                    <button class="botao" id="primeiro">Cadastrar</button>
+                </a>
+            </div>
+            <div class="inputs-proprios">
+                <label for="segundo">Cadastro de Produtos:</label>
+                <a href="./produtos.html">
+                    <button class="botao" id="segundo">Cadastrar</button>
+                </a>
+            </div>
+            <div class="inputs-proprios">
+                <label for="terceiro">Ver produtos e clientes cadastrados:</label>
+                <a href="./prod-clien-cadastrados.html">
+                    <button class="botao" id="terceiro" onclick="carregaListas()">Ver</button>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="fim-comeco">
+            <p>Desafio #2 do Hiring coders</p>
+            <p>By Mateus</p>
+        </div>
+    </footer>
+    <script src="./script/script.js"></script>
+</body>
+</html>

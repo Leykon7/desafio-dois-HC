@@ -1,0 +1,8 @@
+a {
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    width: 70px;
+}

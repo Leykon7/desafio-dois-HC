@@ -1,0 +1,20 @@
+#prod, #clien{
+     width: fit-content;
+     height: fit-content;
+}
+
+ol{
+    margin: 7px;
+}
+
+h3{
+    text-align: center;
+}
+
+#divAdicional{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    /* border: 7px solid chartreuse; */
+}

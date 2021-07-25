@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de produtos</title>
+
+    <link rel="stylesheet" href="./estilos/global.css">
+    <link rel="stylesheet" href="./estilos/produtos.css">
+
+</head>
+<body>
+    <header>
+        <img src="./assets/baixados.png">
+        <h1>Cadastre um Produto</h1>
+        <div>
+            texto de dimensionamento
+        </div>
+    </header>
+    <main>
+        <div class="inputs">
+            <div class="inputs-proprios">
+                <label for="nome">Nome:</label>
+                <input id="nome" type="text">
+            </div>
+            <div class="inputs-proprios">
+                <label for="descricao">Descrição:</label>
+                <input id="descricao" type="text">
+            </div>
+            <div class="inputs-proprios">
+                <label for="codigo">Código:</label>
+                <input id="codigo" type="text">
+            </div >
+            <div class="inputs-proprios">
+                <label for="preco">Preço:</label>
+                <input id="preco" type="text">
+            </div>
+            <button class="botao" onclick="cadastraProduto()">Cadastrar</button>
+        </div>
+    </main>
+    <footer>
+        <div class="fim-comeco">
+            <p>Desafio #2 do Hiring coders</p>
+            <p>By Mateus</p>
+        </div>
+    </footer>
+    <script src="./script/cadastro_produtos.js"></script>
+</body>
+</html>

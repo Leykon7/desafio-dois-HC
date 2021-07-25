@@ -1,0 +1,43 @@
+section{
+    height: 350px;
+    width: 490px;
+}
+
+.agrupamentos{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+hr{
+    width: 100%;
+    margin: 7px;
+}
+
+#containerUm{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#containerDois{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+select{
+    color: black;
+}
+
+#nome-cliente, #sobrenome{
+    width: 200px;
+}
+
+#rua{
+    width: 150%;
+}
+
+#numero{
+    width: 35%;
+}
+
