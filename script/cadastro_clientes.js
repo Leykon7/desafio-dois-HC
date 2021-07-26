@@ -1,35 +1,49 @@
 function cadastraCliente(){
-    const nomeCliente = document.querySelector("#nome-cliente");
-    const sobrenome = document.querySelector("#sobrenome");
-    const data = document.querySelector("#data");
-    const email = document.querySelector("#emailCliente");
-    const rua = document.querySelector("#rua");
-    const numero = document.querySelector("#numero");
-    const bairro = document.querySelector("#bairro");
-    const cidade = document.querySelector("#cidade");
-    const estado = document.querySelector("#estado");
-    const cep = document.querySelector("#cep");
-    
-    endereco = [
-        rua,
-        numero,
-        bairro,
-        cidade,
-        estado,
-        cep
-    ];
+    const nomeCliente = document.querySelector("#nome-cliente").value;
+    const sobrenome = document.querySelector("#sobrenome").value;
+    const data = document.querySelector("#data").value;
+    const email = document.querySelector("#emailCliente").value;
+    const rua = document.querySelector("#rua").value;
+    const numero = document.querySelector("#numero").value;
+    const bairro = document.querySelector("#bairro").value;
+    const cidade = document.querySelector("#cidade").value;
+    const estado = document.querySelector("#estado").value;
+    const cep = document.querySelector("#cep").value;
 
-    cliente = [
+    let ultimoIdGerado = 0;
+
+    if(localStorage.getItem('ultimoIdGerado') == null) {
+        localStorage.setItem('ultimoIdGerado', 1);
+    } else {
+        ultimoIdGerado = parseInt(localStorage.getItem('ultimoIdGerado'));
+        localStorage.setItem('ultimoIdGerado', ultimoIdGerado + 1)
+    }
+
+    ultimoIdGerado = localStorage.getItem('ultimoIdGerado');
+
+    let listaUsuarios = JSON.parse(localStorage.getItem('usuarios')) || [];    
+    
+    const usuario = {
+        id: ultimoIdGerado,
         nomeCliente,
         sobrenome,
         data,
         email,
-        endereco
-    ];
+        
+        endereco: {
+            cep,
+            rua,
+            bairro,
+            numero,
+            cidade,
+            estado
+        }
+    }
 
-    localStorage.setItem("Cliente", cliente.value);
+    let novaListaUsuarios = [...listaUsuarios, usuario]
+    localStorage.setItem('usuarios', JSON.stringify(novaListaUsuarios));
 
     alert("CLIENTE CADASTRADO!")
 
-    window.location.href="index.html"
+    window.location.href="index.html";
 }
