@@ -18,3 +18,7 @@ h3{
     align-items: center;
     /* border: 7px solid chartreuse; */
 }
+
+button{
+    margin-bottom: 7px;
+}

@@ -10,7 +10,7 @@ function carregaUsuarios() {
         
         const sectionClien = document.querySelector('#clien');
         let p = document.createElement('p');
-        let textoDoP = document.createTextNode('Nenhum cliente cadastrado ainda.');
+        let textoDoP = document.createTextNode('Nenhum cliente cadastrado!');
         p.appendChild(textoDoP);
         sectionClien.appendChild(p);
 

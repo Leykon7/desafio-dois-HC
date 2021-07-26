@@ -4,21 +4,21 @@ function cadastraProduto(){
     const codigo = document.querySelector("#codigo").value;
     const preco = document.querySelector("#preco").value;
     
-    let ultimoIdGeradoProduto = 0;
+    let lastID = 0;
 
-    if(localStorage.getItem('ultimoIdGeradoProduto') == null) {
-        localStorage.setItem('ultimoIdGeradoProduto', 1);
+    if(localStorage.getItem('lastID') == null) {
+        localStorage.setItem('lastID', 1);
     } else {
-        ultimoIdGeradoProduto = parseInt(localStorage.getItem('ultimoIdGeradoProduto'));
-        localStorage.setItem('ultimoIdGeradoProduto', ultimoIdGeradoProduto + 1)
+        lastID = parseInt(localStorage.getItem('lastID'));
+        localStorage.setItem('lastID', lastID + 1)
     }
 
-    ultimoIdGeradoProduto = localStorage.getItem('ultimoIdGeradoProduto');
+    lastID = localStorage.getItem('lastID');
 
     let listaProdutos = JSON.parse(localStorage.getItem('produtos')) || [];
 
     produto = {
-        id: ultimoIdGeradoProduto,
+        id: lastID,
         nome,
         descricao,
         codigo,

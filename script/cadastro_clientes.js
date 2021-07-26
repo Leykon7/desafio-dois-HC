@@ -10,21 +10,21 @@ function cadastraCliente(){
     const estado = document.querySelector("#estado").value;
     const cep = document.querySelector("#cep").value;
 
-    let ultimoIdGerado = 0;
+    let lastID = 0;
 
-    if(localStorage.getItem('ultimoIdGerado') == null) {
-        localStorage.setItem('ultimoIdGerado', 1);
+    if(localStorage.getItem('lastID') == null) {
+        localStorage.setItem('lastID', 1);
     } else {
-        ultimoIdGerado = parseInt(localStorage.getItem('ultimoIdGerado'));
-        localStorage.setItem('ultimoIdGerado', ultimoIdGerado + 1)
+        lastID = parseInt(localStorage.getItem('lastID'));
+        localStorage.setItem('lastID', lastID + 1)
     }
 
-    ultimoIdGerado = localStorage.getItem('ultimoIdGerado');
+    lastID = localStorage.getItem('lastID');
 
     let listaUsuarios = JSON.parse(localStorage.getItem('usuarios')) || [];    
     
     const usuario = {
-        id: ultimoIdGerado,
+        id: lastID,
         nomeCliente,
         sobrenome,
         data,
@@ -33,8 +33,8 @@ function cadastraCliente(){
         endereco: {
             cep,
             rua,
-            bairro,
             numero,
+            bairro,
             cidade,
             estado
         }
