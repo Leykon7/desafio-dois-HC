@@ -29,7 +29,7 @@ function carregaUsuarios() {
             temp = usuariosCadastrados[i].nomeCliente.substring(0, 37);
             temp += ' ...';
         } else {
-            temp = usuariosCadastrados[i].nomeCliente;
+            temp = usuariosCadastrados[i].nomeCliente + ' ' + usuariosCadastrados[i].sobrenome;
         }
 
         texto = document.createTextNode(temp);
@@ -46,7 +46,7 @@ function carregaProdutos() {
         
         const sectionProd = document.querySelector('#prod');
         let p = document.createElement('p');
-        let textoDoP = document.createTextNode('Nenhum produto cadastrado ainda.');
+        let textoDoP = document.createTextNode('Nenhum produto cadastrado!');
         p.appendChild(textoDoP);
         sectionProd.appendChild(p);
 
@@ -65,7 +65,7 @@ function carregaProdutos() {
             temp = produtosCadastrados[i].nome.substring(0, 37);
             temp += ' ...';
         } else {
-            temp = produtosCadastrados[i].nome;
+            temp = produtosCadastrados[i].nome + '(Código: ' + produtosCadastrados[i].codigo + ')';
         }
 
         texto = document.createTextNode(temp);
